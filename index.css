@@ -6,7 +6,7 @@ body {
   
   .container {
     display: flex;
-    background-color: white;
+    background-color: black;
     opacity: 0.8;
   }
   
@@ -54,7 +54,7 @@ body {
     margin: 10px 0;
     padding: 5px;
     transition: color 0.3s;
-    font-size: 10px;
+    font-size: 15px;
     font-weight: bold;
   }
   
@@ -72,9 +72,10 @@ body {
   }
   
   .detail .content {
-    height: 100vh;
+    min-height: 100vh;    
     border-bottom: 1px solid #ddd;
     padding: 20px;
+    color: white;
   }
   
   html, body {
@@ -116,6 +117,7 @@ body {
   #ABOUT .card_container{
     display: flex;
     flex-wrap: wrap;
+    color: black;
   }
   #ABOUT .card{
     display: flex;
@@ -125,8 +127,8 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: white;
-    border-bottom: 2px solid var(--color-icon);
-    border-right:2px solid var(--color-icon) ;
+    border-bottom: 3px solid var(--color-icon);
+    border-right:3px solid var(--color-icon) ;
   }
   #ABOUT .card i{
     color: var(--color-icon);
@@ -298,5 +300,126 @@ body {
     font-weight: bold;
     cursor: pointer;
   }
+
+  @keyframes blur { 
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .animation_blur {
+    animation: blur 1s ease-in-out;
+  }
+  @keyframes slide_up {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+    
+  }
+  .animation_slide_up {
+    animation: slide_up 1s ease-in-out;
+  }
+  @keyframes slide_down {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+    
+  }
+  .animation_slide_down {
+    animation: slide_down 1s ease-in-out;
+  }
+  @keyframes slide_left {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+    
+  }
+  .animation_slide_left {
+    animation: slide_left 1s ease-in-out;
+  }
+  @keyframes slide_right {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+    
+  }
+  .animation_slide_right {
+    animation: slide_right 1s ease-in-out;
+  } 
+  @keyframes zoom_in {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+    
+  }
+  .animation_zoom_in {
+    animation: zoom_in 1s ease-in-out;
+  }
+  @keyframes zoom_out {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+    
+  }
+  .animation_zoom_out {
+    animation: zoom_out 1s ease-in-out;
+  }
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+    
+  }
+  .animation_rotate {
+    animation: rotate 1s ease-in-out;
+  }
+  @keyframes fade_in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+    
+  }
+  .animation_fade_in {
+    animation: fade_in 1s ease-in-out;
+  }
+  @keyframes fade_out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+    
+  }
+  .animation_fade_out {
+    animation: fade_out 2s ease-in-out;
+  }
+  
 
   /* animation */

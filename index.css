@@ -17,13 +17,15 @@ body {
     height: 100%;
     background: rgb(193, 188, 188);
     color: black;
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     opacity: 0.8;
     border-radius: 15px;
+    
   }
+
   .navigate .name{
     font-weight: 500;
   }
@@ -77,6 +79,17 @@ body {
     padding: 20px;
     color: white;
   }
+  .content {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.6s ease-in-out;
+  }
+
+  .content.active {
+      opacity: 1;
+      transform: translateY(0);
+  }
+
   
   html, body {
     scroll-behavior: smooth;
@@ -185,6 +198,15 @@ body {
     border-radius: 5px;
     position: relative;
     width: var(--width-progress);
+    animation: progress-bar 1.5s 1s  ease-in-out;
+  }
+  @keyframes progress-bar {
+    0%{
+      width: 0%;
+    }
+    100%{
+      width: var(--width-progress);
+    }
   }
   
   #SKILLS .progress-text {
@@ -421,5 +443,46 @@ body {
     animation: fade_out 2s ease-in-out;
   }
   
+  .image-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+/* .image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+} */
+
+.image-container::before {
+    content: "";
+    position: absolute;
+    top: -150%;
+    left: -150%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0) 70%);
+    transform: rotate(25deg);
+    opacity: 0;
+}
+
+.image-container:hover::before {
+    opacity: 1;
+    animation: shine-effect 2s ease-in-out;
+}
+
+@keyframes shine-effect {
+    from {
+        top: -150%;
+        left: -150%;
+    }
+    to {
+        top: 150%;
+        left: 150%;
+    }
+}
+
 
   /* animation */
+  

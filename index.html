@@ -16,10 +16,10 @@
 <body>
 
   <div class="container">
-    <div class="navigate animation_slide_right">
+    <div class="navigate animation_slide_right ">
       <img src="icon/Logo.JPG" alt="LÊ HOÀNG HUY" class="image">
       <h3 class="name">LÊ HOÀNG HUY</h3>
-      <span class="position"><a href="">GAME DEVELOPER/WEBSITE DEVELOPER/APP MOBILE DEVELOPER </a>IN HCM CITY</span>
+      <span class="position"><a href="">Web Developer</a>IN HCM CITY</span>
       <a href="#HOME" class="mark">HOME</a>
       <a href="#ABOUT" class="mark">ABOUT</a>
       <a href="#SKILLS" class="mark">SKILLS</a>
@@ -36,7 +36,7 @@
               I'm Lê Hoàng Huy
             </h1>
             <button class="btn_CV">
-              <a href="file/Resume (1).pdf" style="text-decoration: none;color: black;">Dowload CV <i class="bi bi-box-arrow-down"></i>
+              <a href="file/Resume (1).pdf" style="text-decoration: none;color: black;">Get Resume <i class="bi bi-box-arrow-down"></i>
               </a>
             </button>
           </div>
@@ -47,25 +47,25 @@
         <br>
         <span><div style="font-weight: bold;">Hi i'm Le Hoang Huy, i am a fourth-year Software Engineering student at Saigon University in VietNam</div><br>
         i am a passionate about technology and programming, i have a lot of experience in programming and i am always looking for new challenges to improve my skills.        </span>
-        <div class="card_container">
-          <div class="card animation_slide_up" style="--color-icon:red">
+        <div class="card_container ">
+          <div class="card animation_slide_up image-container" style="--color-icon:red">
             <i class="bi bi-browser-edge" style="--color-icon:red"></i>
             <h4>WEB DEVELOPMENT</h4>
           </div>
-          <div class="card animation_slide_up" style="--color-icon:yellow">
+          <!-- <div class="card animation_slide_up" style="--color-icon:yellow">
             <i class="bi bi-controller" style="--color-icon:yellow"></i>
             <h4>GAME DEVELOPMENT</h4>
-          </div>
-          <div class="card animation_slide_up" style="--color-icon:purple">
+          </div> -->
+          <div class="card animation_slide_up image-container" style="--color-icon:purple">
             <i class="bi bi-phone" style="--color-icon:purple"></i>
             <h4>MOBILE DEVELOPMENT</h4>
           </div>
         </div>
-        <div class="hire_notification animation_zoom_in">
+        <div class="hire_notification animation_zoom_in image-container" style="display: block !important;">
           <div class="hire_text">
             I am happy to know you that <br> 5 projects done successfully!
           </div>
-          <a href="#HOME" class="hire">Hire me!</a>
+          <a href="https://github.com/NamelessIT" target="_blank" class="hire">View!</a>
         </div>
       </div>
       <div id="SKILLS" class="content">
@@ -75,36 +75,36 @@
           <div class="skill animation_slide_right">
             <h4>HTML5</h4>
             <div class="progress-container">
-              <div class="progress-bar" style="--width-progress:80% ; --color-progress:#f4b400"></div>
-              <span class="progress-text">80%</span>
+              <div class="progress-bar" style="--width-progress:70% ; --color-progress:#f4b400"></div>
+              <span class="progress-text">70%</span>
             </div>
           </div>
           <div class="skill animation_slide_left">
             <h4>PYTHON</h4>
             <div class="progress-container">
-              <div class="progress-bar" style="--width-progress:60%; --color-progress:blue"></div>
-              <span class="progress-text">60%</span>
+              <div class="progress-bar" style="--width-progress:45%; --color-progress:blue"></div>
+              <span class="progress-text">45%</span>
             </div>
           </div>
           <div class="skill animation_slide_right">
             <h4>C#</h4>
             <div class="progress-container">
-              <div class="progress-bar" style="--width-progress:75%; --color-progress:red"></div>
-              <span class="progress-text">75%</span>
+              <div class="progress-bar" style="--width-progress:65%; --color-progress:red"></div>
+              <span class="progress-text">65%</span>
             </div>
           </div>
           <div class="skill animation_slide_left">
             <h4>DART</h4>
             <div class="progress-container">
-              <div class="progress-bar" style="--width-progress:55%; --color-progress:green"></div>
-              <span class="progress-text">55%</span>
+              <div class="progress-bar" style="--width-progress:30%; --color-progress:green"></div>
+              <span class="progress-text">30%</span>
             </div>
           </div>
           <div class="skill animation_slide_right">
-            <h4>C++</h4>
+            <h4>ReactJS</h4>
             <div class="progress-container">
-              <div class="progress-bar" style="--width-progress:90%; --color-progress:red"></div>
-              <span class="progress-text">90%</span>
+              <div class="progress-bar" style="--width-progress:20%; --color-progress:blue"></div>
+              <span class="progress-text">20%</span>
             </div>
           </div>
           <div class="skill animation_slide_left">
@@ -120,7 +120,7 @@
         <h5>EDUCATION</h5>
         <h3>EDUCATION</h3>
         <br>
-        <div class="certification_edu">
+        <div class="certification_edu image-container" style="display: block !important;">
           <div class="text_edu">
             <span>Bachelor's Degree in Information Technology</span>
             <br>
@@ -166,11 +166,11 @@
 
           </div>
           <div class="message animation_fade_in">
-            <input class="animation_slide_left" type="text" placeholder="Name" />
-            <input class="animation_slide_left" type="email" placeholder="Email" />
-            <input class="animation_slide_left" type="text" placeholder="Subject" />
-            <textarea class="animation_slide_left" placeholder="Message"></textarea>
-            <button  class="btn_send animation_slide_up">Send</button>
+            <input id="name_message" class="animation_slide_left" type="text" placeholder="Name" />
+            <input id="email_message" class="animation_slide_left" type="email" placeholder="Email" />
+            <input id="subject_message" class="animation_slide_left" type="text" placeholder="Subject" />
+            <textarea id="area_message" class="animation_slide_left" placeholder="Message"></textarea>
+            <button id="btn_send"  class="btn_send animation_slide_up">Send</button>
           </div>
         </div>
       </div>

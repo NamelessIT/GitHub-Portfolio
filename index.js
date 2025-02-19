@@ -15,3 +15,37 @@ btn_more.addEventListener('click',function(){
     }
 });
 
+
+document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll(".content");
+    const navLinks = document.querySelectorAll(".navigate .mark");
+
+    function activateSection() {
+        let scrollY = window.scrollY;
+
+        sections.forEach((section, index) => {
+            const sectionTop = section.offsetTop - 100;
+            const sectionHeight = section.offsetHeight;
+
+            if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                // Kích hoạt animation
+                section.classList.add("active");
+
+                // Xóa class active của tất cả link
+                navLinks.forEach(link => {
+                    link.style.color = "";
+                    link.style.textDecoration = "";
+                });
+
+                // Đánh dấu mục đang active
+                navLinks[index].style.color = "#ffcc00";
+                navLinks[index].style.textDecoration = "underline";
+            }
+        });
+    }
+
+    window.addEventListener("scroll", activateSection);
+    activateSection(); // Kích hoạt khi tải trang
+});
+
+

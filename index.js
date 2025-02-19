@@ -48,4 +48,21 @@ document.addEventListener("DOMContentLoaded", function () {
     activateSection(); // Kích hoạt khi tải trang
 });
 
+//animation
 
+// responsive
+function toggleMenu() {
+    const navigate = document.querySelector('.navigate');
+    const detail = document.querySelector('.detail');
+    
+    if (navigate.classList.contains('hide-navigate')) {
+      navigate.classList.remove('hide-navigate');
+      navigate.classList.add('show-navigate');
+      detail.classList.add('show-detail');
+    } else {
+      navigate.classList.remove('show-navigate');
+      navigate.classList.add('hide-navigate');
+      detail.classList.remove('show-detail');
+    }
+  }
+  

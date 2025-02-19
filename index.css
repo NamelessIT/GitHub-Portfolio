@@ -11,8 +11,7 @@ body {
   }
   
   .navigate {
-    width: 20%;
-    margin-left: 10%;
+    width: 30%;
     position: fixed;
     height: 100%;
     background: rgb(193, 188, 188);
@@ -23,7 +22,7 @@ body {
     justify-content: center;
     opacity: 0.8;
     border-radius: 15px;
-    
+      transition: transform 0.3s ease;
   }
 
   .navigate .name{
@@ -103,16 +102,27 @@ body {
     top: 45%;
     left: 10%;
     object-fit: cover;
-    
+    width: 50vw;
+    height: 10%;
   }
   #HOME .Profile .btn_CV {
-    width: auto;
-    height: auto; 
+    width: 45%;
+    height: 50%; 
     border: 5px solid white;
-    border-radius: 5px;
+    border-radius: 15px;
     opacity: 0.8;
     cursor: pointer;
   }
+  #HOME .Profile .btn_contact{
+    width: 45%;
+    height: 50%; 
+    border: 5px solid white;
+    border-radius: 15px;
+    opacity: 0.8;
+    cursor: pointer;
+    background-color: black;
+  }
+
   #HOME .background_image{
     position: absolute;
     width: 100%;
@@ -143,6 +153,7 @@ body {
     border-bottom: 3px solid var(--color-icon);
     border-right:3px solid var(--color-icon) ;
   }
+  
   #ABOUT .card i{
     color: var(--color-icon);
     font-size: 25px;
@@ -217,6 +228,73 @@ body {
     color: #f4b400;
     font-weight: bold;
   }
+
+  .skills-container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 15px;
+    padding: 20px;
+    flex-wrap: wrap;
+    
+  }
+  
+  .skills-box {
+    width: 300px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #e0e0e0;
+    color: black;
+  }
+  
+  .skills-box h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .skills-box ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+  }
+  
+  .skills-box li {
+    font-size: 18px;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 30px;
+    margin-left: 10px;
+    text-align: left;
+  }
+  
+  .skills-box li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: white;
+    font-size: 20px;
+    border: 3px solid black;
+    border-radius: 50px;
+    background-color: black;
+  }
+  
+  .skills-box li strong {
+    display: block;
+    font-weight: bold;
+  }
+  
+  .skills-box li span {
+    color: #777;
+    font-size: 14px;
+  }
+  
   #EDUCATION {
 
   }
@@ -250,6 +328,68 @@ body {
     border-radius: 5px;
     margin-top: 10px;
   }
+
+  .projects {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+
+  }
+  
+  .project {
+    width: 350px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    border: 2px solid rgb(3, 72, 3);
+    
+  }
+  
+  .project .img {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 3px 3px 5px #888888, -3px -3px 5px #cccccc;
+  }
+  
+  .project .img img {
+    width: 100%;
+    border-radius: 20px;
+  }
+  
+  .project  span {
+    display: block;
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .demo {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .demo button {
+    background: white;
+    border: 2px solid #c0c0c0;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .demo button:hover {
+    background: black;
+    color: white;
+  }
+  
   #CONTACT{
 
   }
@@ -483,6 +623,157 @@ body {
     }
 }
 
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 4px solid black;
+  white-space: nowrap;
+  animation: typing 8s steps(20, end)  infinite, blink-caret 1.75s step-end infinite;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+@keyframes typing {
+  0%, 100% {
+    width: 0;
+  }
+  50% {
+    width: 50%;
+  }
+}
+
+@keyframes blink-caret {
+  0%, 100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
 
   /* animation */
   
+  /* Responsive */
+
+  /* Đặt mặc định cho trang web */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+
+
+
+
+
+
+
+
+.mark {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin: 15px 0;
+}
+
+.mark:hover {
+  color: #aaa;
+}
+
+.topbar {
+  display: none;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.topbar i {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.show-navigate {
+  transform: translateX(0);
+}
+
+.hide-navigate {
+  transform: translateX(-100%);
+}
+
+.show-detail {
+  margin-left: 0;
+}
+
+/* Media Query cho màn hình nhỏ hơn 768px (iPhone, iPad, các thiết bị di động) */
+@media (max-width: 768px) {
+  .navigate {
+    position: fixed;
+    transform: translateX(-100%);
+    z-index: 999;
+  }
+
+  .detail {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .topbar {
+    display: block;
+  }
+  #CONTACT .contact_detail{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  #CONTACT .info{
+    display: block;
+    width: 100%;
+  }
+  .projects {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+  #EDUCATION .more{
+    position: absolute;
+    top: 10%;
+    right: 45%;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+  }
+  #EDUCATION .certification_edu {
+    min-height: 116px;
+  }
+  #HOME .Profile .btn_CV {
+
+    height: 65%; 
+
+  }
+  #HOME .Profile .btn_contact{
+    height: 65%; 
+    
+  }
+  #ABOUT .hire_notification{
+    height: 180px;
+  }
+  #ABOUT .hire_text {
+    margin:15px 
+  }
+  #ABOUT .hire{
+    display: block;
+    text-align: center;
+    margin: 0 0 0 0px;
+  }
+}

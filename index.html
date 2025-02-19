@@ -14,7 +14,11 @@
 </head>
 
 <body>
-
+  <div class="topbar">
+    <i class="bi bi-list" onclick="toggleMenu()"></i>
+    <span>LÊ HOÀNG HUY</span>
+  </div>
+  
   <div class="container">
     <div class="navigate animation_slide_right ">
       <img src="icon/Logo.JPG" alt="LÊ HOÀNG HUY" class="image">
@@ -30,14 +34,20 @@
       <div id="HOME" class="content">
         <div class="background_image"></div>
           <div class="Profile animation_slide_up">       
-            <h1>
+            <h1 class="text-animation">
               Hi!
               <br>
-              I'm Lê Hoàng Huy
+              <span class="typewriter">
+                I'm Lê Hoàng Huy
+
+              </span>
             </h1>
             <button class="btn_CV">
               <a href="file/Resume (1).pdf" style="text-decoration: none;color: black;">Get Resume <i class="bi bi-box-arrow-down"></i>
               </a>
+            </button>
+            <button class="btn_contact">
+              <a href="#CONTACT" style="text-decoration: none;color: white;">Contact Info</a>
             </button>
           </div>
       </div>
@@ -115,6 +125,31 @@
             </div>
           </div>
         </div>
+
+        <div class="skills-container">
+          <div class="skills-box animation_slide_right">
+            <h2>Mobile Development</h2>
+            <ul>
+              <li><strong>Flutter</strong><br><span>Basic</span></li>
+              <li><strong>Android</strong><br><span>Intermediate</span></li>
+              <li><strong>React Native</strong><br><span>Basic</span></li>
+              <li><strong>Java</strong><br><span>Experienced</span></li>
+              <li><strong>Dart</strong><br><span>Intermediate</span></li>
+              <li><strong>Material UI</strong><br><span>Basic</span></li>
+            </ul>
+          </div>
+          <div class="skills-box animation_slide_left">
+            <h2>Backend Development</h2>
+            <ul>
+              <li><strong>My SQL</strong><br><span>Intermediate</span></li>
+              <li><strong>Node JS</strong><br><span>Basic</span></li>
+              <li><strong>Spring Boot</strong><br><span>Basic</span></li>
+              <li><strong>Git</strong><br><span>Intermediate</span></li>
+            </ul>
+          </div>
+        </div>
+        
+
       </div>
       <div id="EDUCATION" class="content">
         <h5>EDUCATION</h5>
@@ -131,11 +166,40 @@
         <table class="detail_cert " style="display: none;">
           <tbody >
             <tr>
-              <th>Currently a 4th-year student with a strong foundation in software development, networking, and database management.</th>
+              <th>Currently a 3th-year student with a strong foundation in software development, networking, and database management.</th>
               <th>Achieved IELTS certification 5.5.</th>
             </tr>
           </tbody>
         </table>
+        <Projects>
+          <h5 style="text-align: center; font-size: 20px; font-weight: bold;">Projects</h5>
+        </Projects>
+
+
+        <div class="projects">
+          <div class="project image-container">
+            <div class="img">
+              <img src="images/fast_food.JPG" alt="Fast Food Website">
+            </div>
+            <span>Fast Food Website</span>
+            <div class="demo">
+              <a href="https://github.com/NamelessIT"><button>Github</button></a>
+              <a href="https://github.com/NamelessIT"><button>Live Demo</button></a>
+            </div>
+          </div>
+          <div class="project image-container">
+            <div class="img">
+              <img src="images/FoodStore.JPG" alt="Food Store Website">
+            </div>
+            <span>Food Store Website</span>
+            <div class="demo">
+              <a href="https://github.com/NamelessIT"><button>Github</button></a>
+              <a href="https://github.com/NamelessIT"><button>Live Demo</button></a>
+            </div>
+          </div>
+        </div>
+        
+
       </div>
       <div id="CONTACT" class="content">
         <h5>GET IN TOUCH</h5>
@@ -143,21 +207,27 @@
         <div class="contact_detail">
           <div class="info animation_fade_in">
             <div class="card_info animation_slide_right">
-              <div class="border-card">
+              <div class="border-card image-container">
                 <i class="bi bi-geo-alt"></i>
               </div>
               <h4 class="text">Ho Chi Minh City</h4>
             </div>
+            <div class="card_info animation_slide_right">
+              <div class="border-card image-container">
+                <i class="bi bi-envelope"></i>
+              </div>
+              <a href="#"  style="text-decoration: none;"><h4 class="text">Email</h4></a>
+            </div>
 
             <div class="card_info animation_slide_right">
-              <div class="border-card">
+              <div class="border-card image-container">
                 <i class="bi bi-github"></i>
               </div>
               <a href="https://github.com/NamelessIT" target="_blank" style="text-decoration: none;"><h4 class="text">Github</h4></a>
             </div>
             
             <div class="card_info animation_slide_right">
-              <div class="border-card">
+              <div class="border-card image-container">
                 <i class="bi bi-telephone"></i>
               </div>
               <!-- <h4 class="text">+84 98 1544 288</h4> -->
@@ -166,10 +236,10 @@
 
           </div>
           <div class="message animation_fade_in">
-            <input id="name_message" class="animation_slide_left" type="text" placeholder="Name" />
-            <input id="email_message" class="animation_slide_left" type="email" placeholder="Email" />
-            <input id="subject_message" class="animation_slide_left" type="text" placeholder="Subject" />
-            <textarea id="area_message" class="animation_slide_left" placeholder="Message"></textarea>
+            <input id="name_message" class="animation_slide_left" type="text" placeholder="Name" style="font-weight: bold;" />
+            <input id="email_message" class="animation_slide_left" type="email" placeholder="Email" style="font-weight: bold;" />
+            <input id="subject_message" class="animation_slide_left" type="text" placeholder="Subject" style="font-weight: bold;" />
+            <textarea id="area_message" class="animation_slide_left" placeholder="Message" style="font-weight: bold;"></textarea>
             <button id="btn_send"  class="btn_send animation_slide_up">Send</button>
           </div>
         </div>

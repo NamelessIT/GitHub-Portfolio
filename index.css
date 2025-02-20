@@ -716,6 +716,7 @@ body {
     position: fixed;
     transform: translateX(-100%);
     z-index: 999;
+    display: none !important;
   }
 
   .detail {

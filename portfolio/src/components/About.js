@@ -17,6 +17,8 @@ const skills = [
   { name: "Unity", img: "slider_15.svg" },
 ];
 
+const PUBLIC_URL = process.env.PUBLIC_URL;
+
 function About() {
   return (
     <section className="about section" id="About">
@@ -71,7 +73,9 @@ function About() {
                                     </div>
                             <div className="row autoShow">
                                 <div className="buttons padd-15">
-                                            <a href="#Resume" target="_blank" className="btn">Download CV</a>
+                                            <a href="/Resume.pdf" download className="btn">
+                                                Download CV
+                                            </a>
                                             <a href="#Contact" className="btn hire-me">Hire Me</a>
                                 </div>
                             </div>
@@ -87,7 +91,7 @@ function About() {
                                         style={{ "--position": index + 1 }}
                                     >
                                         <div className="card shadow-dark">
-                                        <img src={`${skill.img}`} alt={skill.name} />
+                                        <img src={`${PUBLIC_URL}/${skill.img}`} alt={skill.name} />
                                         <p className="skill-name">{skill.name}</p>
                                         </div>
                                     </div>

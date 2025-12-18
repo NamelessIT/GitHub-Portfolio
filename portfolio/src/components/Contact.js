@@ -101,7 +101,7 @@ const Contact = ({ triggerLoading }) => {
           <div className="contact-info-item padd-15">
             <div className="icon"><i className="fa fa-phone"></i></div>
             <h4>Call Me On</h4>
-            <p>+00 000 000 000</p>
+            <p>+09 815 442 88</p>
           </div>
           <div className="contact-info-item padd-15">
             <div className="icon"><i className="fa fa-map-marker-alt"></i></div>
@@ -111,12 +111,12 @@ const Contact = ({ triggerLoading }) => {
           <div className="contact-info-item padd-15">
             <div className="icon"><i className="fa fa-envelope"></i></div>
             <h4>Email</h4>
-            <p><a href="https://www.gmail.com/" target="_blank" rel="noopener noreferrer">https://www.gmail.com/</a></p>
+            <p><a href="https://www.gmail.com/" target="_blank" rel="noopener noreferrer">hoanghuy192004@gmail.com</a></p>
           </div>
           <div className="contact-info-item padd-15">
-            <div className="icon"><i className="fa fa-globe-europe"></i></div>
-            <h4>My Website</h4>
-            <p><a href="https://www.google.gg/" target="_blank" rel="noopener noreferrer">https://www.google.gg/</a></p>
+            <div className="icon"><i className="fa fa-brands fa-linkedin"></i></div>
+            <h4>Linkedin</h4>
+            <p><a href="https://www.linkedin.com/in/ho%C3%A0ng-huy-l%C3%AA-6a03a4363/" target="_blank" rel="noopener noreferrer">linkedin</a></p>
           </div>
         </div>
       </div>

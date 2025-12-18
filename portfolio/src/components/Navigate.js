@@ -20,7 +20,7 @@ function Navigate() {
         <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
           <i className="fa-brands fa-facebook"></i>
         </a>
-        <a href="https://www.mail.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.gmail.com" target="_blank" rel="noopener noreferrer">
           <i className="fa fa-envelope"></i>
         </a>
         <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">

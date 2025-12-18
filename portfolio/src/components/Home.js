@@ -3,6 +3,7 @@ import React,{ useEffect, useRef } from "react";
 const Home = () => {
   const typingRef = useRef(null);
   const cursorRef = useRef(null);
+  const PUBLIC_URL = process.env.PUBLIC_URL;
 
   useEffect(() => {
     const phrases = [
@@ -58,11 +59,11 @@ const Home = () => {
               <span className="typing" ref={typingRef}></span>
               <span className="typed-cursor typed-cursor--blink" ref={cursorRef} aria-hidden="true">|</span>
             </h3>
-            <p>I am studying software engineering, and my expertise is to create websites, applications, develop video-games and many more...</p>
+            <p>I am studying software engineering, and my expertise is to create websites, applications, develop video-games</p>
             <a href="#Contact"  rel="noopener noreferrer" className="btn hire-me">Hire Me</a>
           </div>
           <div className="home-img padd-15">
-            <img src="logo192.png" alt="home-img" />
+            <img src={PUBLIC_URL + "/logo192.png"} alt="home-img" />
           </div>
         </div>
       </div>

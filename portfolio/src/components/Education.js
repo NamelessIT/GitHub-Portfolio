@@ -60,14 +60,7 @@ const Education = () => {
                                                             <i className="fa fa-calendar"></i> 2022
                                                         </h3>
                                                         <h4 className="timeline-title">IELTS Certification - Band 5.5</h4>
-                                                        <p className="timeline-text">Achieved IELTS 5.5, demonstrating a
-                                                            solid
-                                                            foundation in English proficiency across listening, reading,
-                                                            writing, and speaking. This certification has enhanced my
-                                                            ability to comprehend technical documents, research papers,
-                                                            and
-                                                            online resources, allowing me to learn new technologies and
-                                                            concepts more effectively.</p>
+                                                    
                                                     </div>
                                                 </div>
                                             </div>

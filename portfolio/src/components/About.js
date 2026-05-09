@@ -2,19 +2,18 @@ import React from "react";
 
 
 const skills = [
-  { name: "C", img: "slider_1.svg" },
-  { name: "C++", img: "slider_2.svg" },
-  { name: "C#", img: "slider_3.svg" },
-  { name: "Html", img: "slider_4.svg" },
-  { name: "Css", img: "slider_5.svg" },
-  { name: "Javascript", img: "slider_6.svg" },
-  { name: "Tailwind CSS", img: "slider_8.svg" },
-  { name: "ReactJS", img: "slider_9.svg" },
-  { name: "PHP", img: "slider_11.svg" },
+  { name: "JavaScript", img: "slider_6.svg" },
+  { name: "TypeScript", img: "slider_7.svg" },
   { name: "Java", img: "slider_12.svg" },
-  { name: "Spring boot", img: "slider_13.svg" },
-  { name: "Python", img: "slider_14.svg" },
-  { name: "Unity", img: "slider_15.svg" },
+  { name: "C#", img: "slider_3.svg" },
+  { name: "HTML", img: "slider_4.svg" },
+  { name: "CSS", img: "slider_5.svg" },
+  { name: "ReactJS", img: "slider_9.svg" },
+  { name: "Tailwind CSS", img: "slider_8.svg" },
+  { name: "Spring Boot", img: "slider_13.svg" },
+  { name: "Node.js", img: "slider_10.svg" },
+  { name: "Docker", img: "slider_1.svg" },
+  { name: "AWS", img: "slider_2.svg" },
 ];
 
 const PUBLIC_URL = process.env.PUBLIC_URL;
@@ -32,8 +31,8 @@ function About() {
                 <div className="about-content padd-15">
                     <div className="row autoShow">
                         <div className="about-text padd-15">
-                            <h3>I'm Phan Viet Toan and a fourth-year  <span>Software Engineer</span> student at Saigon University in Vietnam</h3>
-                            <p>I am passionate about technology and have a strong foundation in programming, problem-solving, software development and game development. I am currently seeking internship opportunities to further enhance my skills and gain hands-on experience in the software development field.</p>
+                            <h3>I'm Lê Hoàng Huy — a <span>Software Engineering</span> student at Saigon University, Vietnam</h3>
+                            <p>Enthusiastic Software Engineering student with hands-on experience in full-stack web development and AWS serverless architecture through academic projects and self-learning. Passionate about solving problems, designing scalable systems, and continuously learning new technologies in a team environment.</p>
                         </div>
                     </div>
                     <div className="row">
@@ -46,22 +45,22 @@ function About() {
                                             <p>Age : <span>21</span></p>
                                         </div>
                                         <div className="info-item padd-15">
-                                            <p>Facebook : <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><span>click-here</span></a></p>
+                                            <p>Email : <span>hoanghuy192004@gmail.com</span></p>
                                         </div>
                                         <div className="info-item padd-15">
-                                            <p>Email : <span>haonghuygoblin@gmail.com</span></p>
+                                            <p>Phone : <span>+84 981 544 288</span></p>
                                         </div>
                                         <div className="info-item padd-15">
-                                            <p>GitHub : <a href="https://github.com/" target="_blank" rel="noopener noreferrer"><span>click-here</span></a></p>
+                                            <p>GitHub : <a href="https://github.com/NamelessIT" target="_blank" rel="noopener noreferrer"><span>NamelessIT</span></a></p>
+                                        </div>
+                                        <div className="info-item padd-15">
+                                            <p>LinkedIn : <a href="https://www.linkedin.com/in/ho%C3%A0ng-huy-l%C3%AA-6a03a4363/" target="_blank" rel="noopener noreferrer"><span>Lê Hoàng Huy</span></a></p>
+                                        </div>
+                                        <div className="info-item padd-15">
+                                            <p>English : <span>B2 (IELTS 5.5)</span></p>
                                         </div>
                                         <div className="info-item padd-15">
                                             <p>Freelance : <span>Available</span></p>
-                                        </div>
-                                        <div className="info-item padd-15">
-                                            <p>LinkedIn : <a href="https://www.linkedin.com/in/" target="_blank" rel="noopener noreferrer"><span>click-here</span></a></p>
-                                        </div>
-                                        <div className="info-item padd-15">
-                                            <p>Phone : <span>+00 000 000 000</span></p>
                                         </div>
                                         <div className="info-item padd-15">
                                             <p>City : <span>Ho Chi Minh City</span></p>

@@ -805,11 +805,29 @@ autoShowAnimation animation {
 }
 
 .portfolio-overlay p {
-    font-size: 14px;
+    font-size: 13px;
     color: var(--text-yellow-700);
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     line-height: 1.4;
+}
+
+.project-meta {
+    display: block;
+    font-size: 11px;
+    color: var(--skin-color);
+    text-align: center;
+    margin-bottom: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.project-tech {
+    font-size: 11px !important;
+    color: var(--text-yellow-900) !important;
+    opacity: 0.85;
+    margin-bottom: 12px !important;
 }
 
 .portfolio-buttons {

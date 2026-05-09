@@ -17,17 +17,14 @@ function Navigate() {
         </a>
       </div>
       <div className="social-icons">
-        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-          <i className="fa-brands fa-facebook"></i>
-        </a>
-        <a href="https://www.gmail.com" target="_blank" rel="noopener noreferrer">
+        <a href="mailto:hoanghuy192004@gmail.com" rel="noopener noreferrer">
           <i className="fa fa-envelope"></i>
         </a>
-        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-          <i className="fa-brands fa-linkedin"></i>
-        </a>
-        <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/NamelessIT" target="_blank" rel="noopener noreferrer">
           <i className="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/ho%C3%A0ng-huy-l%C3%AA-6a03a4363/" target="_blank" rel="noopener noreferrer">
+          <i className="fa-brands fa-linkedin"></i>
         </a>
       </div>
 

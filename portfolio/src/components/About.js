@@ -4,16 +4,13 @@ import React from "react";
 const skills = [
   { name: "JavaScript", img: "slider_6.svg" },
   { name: "TypeScript", img: "slider_7.svg" },
-  { name: "Java", img: "slider_12.svg" },
-  { name: "C#", img: "slider_3.svg" },
-  { name: "HTML", img: "slider_4.svg" },
-  { name: "CSS", img: "slider_5.svg" },
-  { name: "ReactJS", img: "slider_9.svg" },
+  { name: "ReactJS",    img: "slider_9.svg" },
   { name: "Tailwind CSS", img: "slider_8.svg" },
+  { name: "HTML",       img: "slider_4.svg" },
+  { name: "CSS",        img: "slider_5.svg" },
+  { name: "C#",         img: "slider_3.svg" },
+  { name: "Java",       img: "slider_12.svg" },
   { name: "Spring Boot", img: "slider_13.svg" },
-  { name: "Node.js", img: "slider_10.svg" },
-  { name: "Docker", img: "slider_1.svg" },
-  { name: "AWS", img: "slider_2.svg" },
 ];
 
 const PUBLIC_URL = process.env.PUBLIC_URL;
@@ -72,7 +69,7 @@ function About() {
                                     </div>
                             <div className="row autoShow">
                                 <div className="buttons padd-15">
-                                            <a href="/Resume.pdf" download className="btn">
+                                            <a href={`${PUBLIC_URL}/Resume.pdf`} download className="btn">
                                                 Download CV
                                             </a>
                                             <a href="#Contact" className="btn hire-me">Hire Me</a>

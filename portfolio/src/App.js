@@ -27,14 +27,8 @@ function App() {
             <Home />
             <About />
             <Education />
-            <div id='Projects'>
-              <Projects />
-            </div>
-            {/* Truyền hàm setLoading xuống */}
-            <Contact triggerLoading={() => {
-              setLoading(true);
-              setTimeout(() => setLoading(false), 1000);
-            }} />
+            <Projects />
+            <Contact />
           </div>
         </div>
       )}

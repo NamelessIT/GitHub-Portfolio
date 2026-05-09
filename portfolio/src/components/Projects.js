@@ -10,7 +10,7 @@ const projects = [
     description:
       "A music streaming platform built entirely on AWS serverless architecture, mirroring Spotify's core features for audio streaming, playlist management, and social interaction.",
     tech: "React · Vite · Tailwind CSS · Redux Toolkit · Node.js · AWS Lambda · API Gateway · DynamoDB · S3 · Cognito · AWS SAM",
-    github: "https://github.com/sieunguyen28/Website_Spotify",
+    github: "https://github.com/khiemHoang1410/aws-prj-spotify",
   },
   {
     img: "facebook.jpg",
@@ -21,7 +21,7 @@ const projects = [
     description:
       "A production-oriented social network replicating Facebook's core features with clean architecture, real-time chat via SignalR, Reels (chunked video upload), and containerized deployment.",
     tech: "React · TypeScript · Vite · ASP.NET Core · C# · PostgreSQL · Redis · SignalR · Entity Framework Core · Docker Compose · Nginx",
-    github: "https://github.com/NamelessIT",
+    github: "https://github.com/NamelessIT/Facebook_Clone",
   },
   {
     img: "shop_store.jpg",

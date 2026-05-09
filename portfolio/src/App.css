@@ -830,6 +830,34 @@ autoShowAnimation animation {
     margin-bottom: 12px !important;
 }
 
+/* Contact success message */
+.contact-success {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    text-align: center;
+    animation: fadeIn 0.4s ease;
+}
+
+.contact-success i {
+    font-size: 52px;
+    color: var(--skin-color);
+    margin-bottom: 16px;
+}
+
+.contact-success p {
+    font-size: 18px;
+    color: var(--text-black-900);
+    font-weight: 500;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
 .portfolio-buttons {
     display: flex;
     gap: 10px;

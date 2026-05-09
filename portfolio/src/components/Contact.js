@@ -1,35 +1,33 @@
 // Contact.js
 import React, { useState } from "react";
 
-const Contact = ({ triggerLoading }) => {
+const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
   const [errors, setErrors] = useState({});
+  const [submitted, setSubmitted] = useState(false);
 
   const validate = () => {
     let tempErrors = {};
-
     if (!form.name.trim()) tempErrors.name = "Name is required.";
     if (!form.email.trim()) tempErrors.email = "Email is required.";
     else if (!/\S+@\S+\.\S+/.test(form.email)) tempErrors.email = "Email is invalid.";
     if (!form.subject.trim()) tempErrors.subject = "Subject is required.";
     if (!form.message.trim()) tempErrors.message = "Message is required.";
-
     setErrors(tempErrors);
     return Object.keys(tempErrors).length === 0;
   };
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
-    setErrors({ ...errors, [e.target.name]: "" }); // clear error when user types
+    setErrors({ ...errors, [e.target.name]: "" });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
-      triggerLoading(); // Gọi loading từ App.js
-      // Bạn có thể gọi API tại đây nếu muốn gửi thông tin
-      console.log("Form Submitted:", form);
-      setForm({ name: "", email: "", subject: "", message: "" }); // reset form
+      setSubmitted(true);
+      setForm({ name: "", email: "", subject: "", message: "" });
+      setTimeout(() => setSubmitted(false), 5000);
     }
   };
 
@@ -40,59 +38,66 @@ const Contact = ({ triggerLoading }) => {
           <h2>Contact Me</h2>
         </div>
 
-        <h3 className="contact-title">Do You Have Any Question ?</h3>
-        <h4 className="contact-sub-title">I'M AT YOUR SERVICES</h4>
+        <h3 className="contact-title">Do You Have Any Question?</h3>
+        <h4 className="contact-sub-title">I'M AT YOUR SERVICE</h4>
 
         <div className="row autoShow">
           <div className="contact-form padd-15">
-            <form onSubmit={handleSubmit} noValidate>
-              <div className="row">
-                <div className="form-item col-6 padd-15">
-                  <div className="form-group">
-                    <input type="text" name="name" value={form.name} onChange={handleChange}
-                      className="form-control" placeholder="Name" />
-                    {errors.name && <small className="error">{errors.name}</small>}
-                  </div>
-                </div>
-                <div className="form-item col-6 padd-15">
-                  <div className="form-group">
-                    <input type="email" name="email" value={form.email} onChange={handleChange}
-                      className="form-control" placeholder="Email" />
-                    {errors.email && <small className="error">{errors.email}</small>}
-                  </div>
-                </div>
+            {submitted ? (
+              <div className="contact-success">
+                <i className="fa fa-check-circle"></i>
+                <p>Thank you for reaching out! I'll get back to you soon.</p>
               </div>
+            ) : (
+              <form onSubmit={handleSubmit} noValidate>
+                <div className="row">
+                  <div className="form-item col-6 padd-15">
+                    <div className="form-group">
+                      <input type="text" name="name" value={form.name} onChange={handleChange}
+                        className="form-control" placeholder="Name" />
+                      {errors.name && <small className="error">{errors.name}</small>}
+                    </div>
+                  </div>
+                  <div className="form-item col-6 padd-15">
+                    <div className="form-group">
+                      <input type="email" name="email" value={form.email} onChange={handleChange}
+                        className="form-control" placeholder="Email" />
+                      {errors.email && <small className="error">{errors.email}</small>}
+                    </div>
+                  </div>
+                </div>
 
-              <div className="row">
-                <div className="form-item col-12 padd-15">
-                  <div className="form-group">
-                    <input type="text" name="subject" value={form.subject} onChange={handleChange}
-                      className="form-control" placeholder="Subject" />
-                    {errors.subject && <small className="error">{errors.subject}</small>}
+                <div className="row">
+                  <div className="form-item col-12 padd-15">
+                    <div className="form-group">
+                      <input type="text" name="subject" value={form.subject} onChange={handleChange}
+                        className="form-control" placeholder="Subject" />
+                      {errors.subject && <small className="error">{errors.subject}</small>}
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div className="row">
-                <div className="form-item col-12 padd-15">
-                  <div className="form-group">
-                    <textarea name="message" value={form.message} onChange={handleChange}
-                      className="form-control" placeholder="Message"></textarea>
-                    {errors.message && <small className="error">{errors.message}</small>}
+                <div className="row">
+                  <div className="form-item col-12 padd-15">
+                    <div className="form-group">
+                      <textarea name="message" value={form.message} onChange={handleChange}
+                        className="form-control" placeholder="Message"></textarea>
+                      {errors.message && <small className="error">{errors.message}</small>}
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div className="row">
-                <div className="form-item col-12 padd-15">
-                  <div className="form-group center">
-                    <button type="submit" className="btn">
-                      <span className="default-text">Send Message</span>
-                    </button>
+                <div className="row">
+                  <div className="form-item col-12 padd-15">
+                    <div className="form-group center">
+                      <button type="submit" className="btn">
+                        <span className="default-text">Send Message</span>
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </form>
+              </form>
+            )}
           </div>
         </div>
 
@@ -105,8 +110,8 @@ const Contact = ({ triggerLoading }) => {
           </div>
           <div className="contact-info-item padd-15">
             <div className="icon"><i className="fa fa-map-marker-alt"></i></div>
-            <h4>Country</h4>
-            <p>Vietnam</p>
+            <h4>Location</h4>
+            <p>Ho Chi Minh City, Vietnam</p>
           </div>
           <div className="contact-info-item padd-15">
             <div className="icon"><i className="fa fa-envelope"></i></div>
@@ -114,8 +119,8 @@ const Contact = ({ triggerLoading }) => {
             <p><a href="mailto:hoanghuy192004@gmail.com" rel="noopener noreferrer">hoanghuy192004@gmail.com</a></p>
           </div>
           <div className="contact-info-item padd-15">
-            <div className="icon"><i className="fa fa-brands fa-linkedin"></i></div>
-            <h4>Linkedin</h4>
+            <div className="icon"><i className="fa-brands fa-linkedin"></i></div>
+            <h4>LinkedIn</h4>
             <p><a href="https://www.linkedin.com/in/ho%C3%A0ng-huy-l%C3%AA-6a03a4363/" target="_blank" rel="noopener noreferrer">Lê Hoàng Huy</a></p>
           </div>
         </div>

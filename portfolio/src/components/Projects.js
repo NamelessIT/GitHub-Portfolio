@@ -1,125 +1,96 @@
 import React from "react";
 
+const projects = [
+  {
+    img: "spotify.jpg",
+    alt: "AWS Serverless Spotify Clone",
+    title: "AWS Serverless Spotify Clone",
+    year: "2025",
+    role: "Full-Stack Developer · Team (2 members)",
+    description:
+      "A music streaming platform built entirely on AWS serverless architecture, mirroring Spotify's core features for audio streaming, playlist management, and social interaction.",
+    tech: "React · Vite · Tailwind CSS · Redux Toolkit · Node.js · AWS Lambda · API Gateway · DynamoDB · S3 · Cognito · AWS SAM",
+    github: "https://github.com/sieunguyen28/Website_Spotify",
+  },
+  {
+    img: "facebook.jpg",
+    alt: "Facebook Clone",
+    title: "Facebook Clone — Fullstack Social Network",
+    year: "2025",
+    role: "Full-Stack Developer · Personal Project",
+    description:
+      "A production-oriented social network replicating Facebook's core features with clean architecture, real-time chat via SignalR, Reels (chunked video upload), and containerized deployment.",
+    tech: "React · TypeScript · Vite · ASP.NET Core · C# · PostgreSQL · Redis · SignalR · Entity Framework Core · Docker Compose · Nginx",
+    github: "https://github.com/NamelessIT",
+  },
+  {
+    img: "shop_store.jpg",
+    alt: "Sale Management System",
+    title: "Sale Management System",
+    year: "2024",
+    role: "Frontend Developer · Team (5 members)",
+    description:
+      "A comprehensive CMS-based web application featuring product management, analytics dashboards with Chart.js, JWT authentication, and PDF export functionality.",
+    tech: "React 19 · Vite · Tailwind CSS · Chart.js · JWT · Swagger",
+    github: "https://github.com/NTDat-16/CaiTiemTapHoa",
+  },
+  {
+    img: "uno_platform.jpg",
+    alt: "Mobile Shopping App",
+    title: "Mobile Shopping App",
+    year: "2024",
+    role: "Mobile Frontend Developer · Team (4 members)",
+    description:
+      "Cross-platform mobile application for online product purchases. Built shopping cart, order confirmation, and toast notification system. Consistent UI/UX across Web and Android via Uno Platform.",
+    tech: "Uno Platform · C# (.NET) · Swagger · REST API",
+    github: "https://github.com/tiendoha/dotnet-frontend",
+  },
+];
+
 const Projects = () => {
- const publicUrl = process.env.PUBLIC_URL;
+  const publicUrl = process.env.PUBLIC_URL;
   return (
-            <section className="portfolio section" id="portfolio">
-                <div className="container">
-                    <div className="row">
-                        <div className="section-title padd-15">
-                            <h2>Portfolio</h2>
-                        </div>
+    <section className="portfolio section" id="Projects">
+      <div className="container">
+        <div className="row">
+          <div className="section-title padd-15">
+            <h2>Portfolio</h2>
+          </div>
+        </div>
+        <div className="row">
+          <div className="portfolio-heading padd-15">
+            <h2>My Recent Projects:</h2>
+          </div>
+        </div>
+        <div className="row">
+          {projects.map((project, index) => (
+            <div key={index} className="portfolio-item autoShow padd-15">
+              <div className="portfolio-item-inner shadow-dark">
+                <div className="portfolio-img">
+                  <img src={`${publicUrl}/${project.img}`} alt={project.alt} />
+                  <div className="portfolio-overlay">
+                    <h3>{project.title}</h3>
+                    <span className="project-meta">{project.role} &nbsp;|&nbsp; {project.year}</span>
+                    <p>{project.description}</p>
+                    <p className="project-tech"><em>{project.tech}</em></p>
+                    <div className="portfolio-buttons">
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        className="btn"
+                        rel="noreferrer"
+                      >
+                        GitHub
+                      </a>
                     </div>
-                    <div className="row">
-                        <div className="portfolio-heading padd-15">
-                            <h2>My Last Projects: </h2>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="portfolio-item autoShow padd-15">
-                            <div className="portfolio-item-inner shadow-dark">
-                                <div className="portfolio-img">
-                                    <img src={`${publicUrl}/fast_food.jpg`} alt="Fastfood Store"></img>
-                                    <div className="portfolio-overlay">
-                                        <h3>Website: Fastfood Store</h3>
-                                        <p>
-                                            A fast food ordering website developed using PHP Laravel following the MVC architecture,
-                                            with MySQL used as the backend database.
-                                        </p>
-                                        <div className="portfolio-buttons">
-                                            <a
-                                                href="https://github.com/NamelessIT/fast_food"
-                                                target="_blank"
-                                                className="btn"
-                                                rel="noreferrer"
-                                            >
-                                                GitHub
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div className="portfolio-item autoShow padd-15">
-                            <div className="portfolio-item-inner shadow-dark">
-                                <div className="portfolio-img">
-                                    <img src={`${publicUrl}/spotify.jpg`} alt="Spotify"></img>
-                                    <div className="portfolio-overlay">
-                                        <h3>Website: Spotify Clone</h3>
-                                        <p>
-                                            A Spotify clone web application using ReactJS for frontend and
-                                            Django REST Framework for backend, deployed on AWS EC2. Supporting real-time chat via WebSocket.
-                                        </p>
-                                        <div className="portfolio-buttons">
-                                            <a
-                                                href="https://github.com/sieunguyen28/Website_Spotify"
-                                                target="_blank"
-                                                className="btn"
-                                                rel="noreferrer"
-                                            >
-                                                GitHub
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="portfolio-item autoShow padd-15">
-                            <div className="portfolio-item-inner shadow-dark">
-                                <div className="portfolio-img">
-                                    <img src={`${publicUrl}/shop_store.jpg`} alt="Shop Store"></img>
-                                    <div className="portfolio-overlay">
-                                        <h3>Website: Shop Store</h3>
-                                        <p>
-                                            An e-commerce website developed with React 19, Vite and Ant Design 5,
-                                            featuring responsive UI and PDF export functionality.
-                                        </p>
-                                        <div className="portfolio-buttons">
-                                            <a
-                                                href="https://github.com/NTDat-16/CaiTiemTapHoa"
-                                                target="_blank"
-                                                className="btn"
-                                                rel="noreferrer"
-                                            >
-                                                GitHub
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="portfolio-item autoShow padd-15">
-                            <div className="portfolio-item-inner shadow-dark">
-                                <div className="portfolio-img">
-                                    <img src={`${publicUrl}/uno_platform.jpg`} alt="Cross-platform App"></img>
-                                    <div className="portfolio-overlay">
-                                        <h3>Application: Cross-platform Store App</h3>
-                                        <p>
-                                            A cross-platform store application built with Uno Platform and C#,
-                                            supporting Android and Web with a consistent UI experience.
-                                        </p>
-                                        <div className="portfolio-buttons">
-                                            <a
-                                                href="https://github.com/tiendoha/dotnet-frontend"
-                                                target="_blank"
-                                                className="btn"
-                                                rel="noreferrer"
-                                            >
-                                                GitHub
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
+                  </div>
                 </div>
-            </section>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
 

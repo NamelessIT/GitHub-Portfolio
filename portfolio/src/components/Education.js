@@ -11,19 +11,10 @@ const Education = () => {
                                                     <div className="timeline-item">
                                                         <div className="circle-dot"></div>
                                                         <h3 className="timeline-date">
-                                                            <i className="fa fa-calendar"></i> 2022 - Present
+                                                            <i className="fa fa-calendar"></i> Sep 2022 – Aug 2026 (Expected)
                                                         </h3>
-                                                        <h4 className="timeline-title">Bachelor of Engineering in Software
-                                                            Engineering Saigon University, Vietnam</h4>
-                                                        <p className="timeline-text">Currently a 3rd-year student with a
-                                                            strong
-                                                            foundation in software development, algorithms, and system
-                                                            design. Gained hands-on experience in programming, database
-                                                            management, and software architecture. Developed
-                                                            problem-solving
-                                                            skills through coursework and practical projects, focusing
-                                                            on
-                                                            modern technologies and industry best practices.</p>
+                                                        <h4 className="timeline-title">Bachelor of Software Engineering — Saigon University, Vietnam</h4>
+                                                        <p className="timeline-text">GPA: 3.0 / 4.0. Currently a 4th-year student with a strong foundation in software development, algorithms, and system design. Gained hands-on experience in full-stack web development, cloud architecture, database management, and software design patterns. Built multiple projects applying modern technologies and industry best practices.</p>
                                                     </div>
                                                     <div className="timeline-item">
                                                         <div className="circle-dot"></div>

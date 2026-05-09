@@ -7,10 +7,10 @@ const Home = () => {
 
   useEffect(() => {
     const phrases = [
-      "Application Developer",
+      "Full-Stack Developer",
       "Software Engineer",
-      "Game Developer",
-      "Web Developer"
+      "React Developer",
+      "AWS Cloud Builder"
     ];
 
     let phraseIndex = 0;
@@ -59,7 +59,7 @@ const Home = () => {
               <span className="typing" ref={typingRef}></span>
               <span className="typed-cursor typed-cursor--blink" ref={cursorRef} aria-hidden="true">|</span>
             </h3>
-            <p>I am studying software engineering, and my expertise is to create websites, applications, develop video-games</p>
+            <p>Software Engineering student with hands-on experience in full-stack web development and AWS serverless architecture. Skilled in React, JavaScript, ASP.NET Core, and Node.js — passionate about building scalable systems.</p>
             <a href="#Contact"  rel="noopener noreferrer" className="btn hire-me">Hire Me</a>
           </div>
           <div className="home-img padd-15">

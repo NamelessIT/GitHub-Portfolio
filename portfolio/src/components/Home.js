@@ -10,7 +10,8 @@ const Home = () => {
       "Full-Stack Developer",
       "Software Engineer",
       "React Developer",
-      "AWS Cloud Builder"
+      "AWS Cloud Builder",
+      "Unity Game Developer"
     ];
 
     let phraseIndex = 0;
@@ -59,7 +60,7 @@ const Home = () => {
               <span className="typing" ref={typingRef}></span>
               <span className="typed-cursor typed-cursor--blink" ref={cursorRef} aria-hidden="true">|</span>
             </h3>
-            <p>Software Engineering student with hands-on experience in full-stack web development and AWS serverless architecture. Skilled in React, JavaScript, ASP.NET Core, and Node.js — passionate about building scalable systems.</p>
+            <p>Software Engineering student with hands-on experience in full-stack web development, AWS serverless architecture, and Unity game development. Skilled in React, JavaScript, ASP.NET Core, Node.js, and C#/Unity — passionate about building scalable systems and game mechanics.</p>
             <a href="#Contact"  rel="noopener noreferrer" className="btn hire-me">Hire Me</a>
           </div>
           <div className="home-img padd-15">

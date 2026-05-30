@@ -2,6 +2,19 @@ import React from "react";
 
 const projects = [
   {
+    img: "action_rpg.jpg",
+    alt: "Action RPG — Unity Game",
+    title: "Action RPG — 2.5D Action Role-Playing Game",
+    year: "2026 – Present",
+    role: "Unity Developer & Gameplay Programmer · Team (2 members)",
+    description:
+      "A 2.5D action RPG with angle-based directional combat, class-based skill trees, companion AI, and a custom vision/fog-of-war system, built on a modular, data-driven architecture across 140+ C# scripts.",
+    tech: "Unity · C# · URP · Unity Input System · NavMesh AI · Cinemachine · ScriptableObjects · HLSL Shaders",
+    github: "https://github.com/NamelessIT/Action_RPG",
+    // demoPage => mở trang demo trong portfolio (component ActionRpgDemo)
+    demoPage: "action-rpg",
+  },
+  {
     img: "spotify.jpg",
     alt: "AWS Serverless Spotify Clone",
     title: "AWS Serverless Spotify Clone",
@@ -11,6 +24,8 @@ const projects = [
       "A music streaming platform built entirely on AWS serverless architecture, mirroring Spotify's core features for audio streaming, playlist management, and social interaction.",
     tech: "React · Vite · Tailwind CSS · Redux Toolkit · Node.js · AWS Lambda · API Gateway · DynamoDB · S3 · Cognito · AWS SAM",
     github: "https://github.com/khiemHoang1410/aws-prj-spotify",
+    // demoUrl => link demo ngoài (mở tab mới). Để trống/không có => nút Live Demo bị khóa.
+    demoUrl: null,
   },
   {
     img: "facebook.jpg",
@@ -47,8 +62,42 @@ const projects = [
   },
 ];
 
-const Projects = () => {
+const Projects = ({ onOpenDemo }) => {
   const publicUrl = process.env.PUBLIC_URL;
+
+  // Quyết định cách render nút "Live Demo" cho từng project:
+  // 1) demoPage  -> mở trang demo trong portfolio
+  // 2) demoUrl   -> mở link demo ngoài ở tab mới
+  // 3) không có  -> nút bị khóa (disabled, không bấm được)
+  const renderLiveDemo = (project) => {
+    if (project.demoPage) {
+      return (
+        <button
+          type="button"
+          className="btn"
+          onClick={() => onOpenDemo && onOpenDemo(project.demoPage)}
+        >
+          Live Demo
+        </button>
+      );
+    }
+    if (project.demoUrl) {
+      return (
+        <a href={project.demoUrl} target="_blank" className="btn" rel="noreferrer">
+          Live Demo
+        </a>
+      );
+    }
+    return (
+      <span
+        className="btn btn--disabled"
+        title="No live demo available yet"
+        aria-disabled="true"
+      >
+        Live Demo
+      </span>
+    );
+  };
   return (
     <section className="portfolio section" id="Projects">
       <div className="container">
@@ -74,6 +123,7 @@ const Projects = () => {
                     <p>{project.description}</p>
                     <p className="project-tech"><em>{project.tech}</em></p>
                     <div className="portfolio-buttons">
+                      {renderLiveDemo(project)}
                       <a
                         href={project.github}
                         target="_blank"

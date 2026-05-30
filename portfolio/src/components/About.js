@@ -11,6 +11,8 @@ const skills = [
   { name: "C#",         img: "slider_3.svg" },
   { name: "Java",       img: "slider_12.svg" },
   { name: "Spring Boot", img: "slider_13.svg" },
+  // TODO: thêm icon Unity vào portfolio/public/unity.svg để hiện đúng logo
+  { name: "Unity",      img: "unity.svg" },
 ];
 
 const PUBLIC_URL = process.env.PUBLIC_URL;
@@ -29,7 +31,7 @@ function About() {
                     <div className="row autoShow">
                         <div className="about-text padd-15">
                             <h3>I'm Lê Hoàng Huy — a <span>Software Engineering</span> student at Saigon University, Vietnam</h3>
-                            <p>Enthusiastic Software Engineering student with hands-on experience in full-stack web development and AWS serverless architecture through academic projects and self-learning. Passionate about solving problems, designing scalable systems, and continuously learning new technologies in a team environment.</p>
+                            <p>Enthusiastic Software Engineering student with hands-on experience in full-stack web development, AWS serverless architecture, and Unity game development through academic and personal projects. Passionate about solving problems, designing scalable systems and game mechanics, and continuously learning new technologies in a team environment.</p>
                         </div>
                     </div>
                     <div className="row">
